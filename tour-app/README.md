@@ -1,4 +1,4 @@
-Preview app https://nitria-ourtour-app.netlify.app/
+Preview app: https://nitria-ourtour-app.netlify.app/
 
 # Getting Started with Create React App
 
