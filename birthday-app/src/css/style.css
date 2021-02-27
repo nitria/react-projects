@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h3,
+h4,
+.btn {
+  text-transform: capitalize;
+  font-family: sans-serif;
+  color: #cc2b5e;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #000;
+}
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc2b5e), to(#753a88));
+  background: linear-gradient(#cc2b5e, #753a88);
+}
+
+body #root {
+  width: 500px;
+  min-width: 330px;
+  height: auto;
+}
+
+body #root .container {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+body #root .container .title {
+  width: 100%;
+  text-align: center;
+}
+
+body #root .container .title .personBadgeFill {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+body #root .container .title h1 {
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+body #root .container .person,
+body #root .container .editBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root .container .person {
+  background: #fff;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+body #root .container .person .img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+body #root .container .person .editBtns {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body #root .container .btn {
+  font-size: 1rem;
+  background: #fff;
+  border: 1px solid #cc2b5e;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+body #root .container .btn:hover {
+  color: #753a88;
+  border: 1px solid #753a88;
+}
+/*# sourceMappingURL=style.css.map */
