@@ -1,0 +1,58 @@
+export const cars = [
+  {
+    id: 1,
+    category: "lamborghini",
+    img: "./images/lamborghini1-thumb.JPG",
+    mainImg: "./images/lamborghini1.JPG",
+    title: "Huracan",
+  },
+  {
+    id: 2,
+    category: "lamborghini",
+    img: "./images/lamborghini2-thumb.JPG",
+    mainImg: "./images/lamborghini2.JPG",
+    title: "Aventador",
+  },
+  {
+    id: 3,
+    category: "ferrari",
+    img: "./images/ferrari1-thumb.JPG",
+    mainImg: "./images/ferrari1.JPG",
+    title: "Spider",
+  },
+  {
+    id: 4,
+    category: "ferrari",
+    img: "./images/ferrari2-thumb.JPG",
+    mainImg: "./images/ferrari2.JPG",
+    title: "SF90 Stradale",
+  },
+  {
+    id: 5,
+    category: "mclaren",
+    img: "./images/mclaren1-thumb.JPG",
+    mainImg: "./images/mclaren1.JPG",
+    title: "720S",
+  },
+  {
+    id: 6,
+    category: "mclaren",
+    img: "./images/mclaren2-thumb.JPG",
+    mainImg: "./images/mclaren2.JPG",
+    title: "570S",
+  },
+  {
+    id: 7,
+    category: "porsche",
+    img: "./images/porsche1-thumb.JPG",
+    mainImg: "./images/porsche1.JPG",
+    title: "911 Turbo S",
+  },
+  {
+    id: 8,
+    category: "porsche",
+    img: "./images/porsche2-thumb.JPG",
+    mainImg: "./images/porsche2.JPG",
+    title: "911 Carrera",
+  },
+];
