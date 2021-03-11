@@ -1,4 +1,4 @@
-#Preview: https://nitria-imagegallery.netlify.app/
+Preview app: https://nitria-imagegallery.netlify.app/
 
 # Getting Started with Create React App
 
