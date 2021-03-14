@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { cars } from "../data";
 import { X, ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 
 const Lightbox = ({ closeLightbox, showImage }) => {
   var currentImage = cars.findIndex((car) => car.mainImg === showImage);
   const [currentIndex, setCurrentIndex] = useState(currentImage);
-  const { mainImg, title, id } = cars[currentIndex];
+  const { title, id } = cars[currentIndex];
 
   const checkNumber = (number) => {
     if (number < 0) {
@@ -18,11 +18,18 @@ const Lightbox = ({ closeLightbox, showImage }) => {
   };
   const prev = useCallback(() => {
     setCurrentIndex(checkNumber(currentIndex - 1));
-  });
+  }, [currentIndex]);
 
   const next = useCallback(() => {
     setCurrentIndex(checkNumber(currentIndex + 1));
-  });
+  }, [currentIndex]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setCurrentIndex(checkNumber(currentIndex + 1));
+    }, 5000);
+    return () => clearInterval(slider);
+  }, [currentIndex]);
 
   return (
     <div className="lightbox">

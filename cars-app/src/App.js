@@ -27,6 +27,7 @@ const App = () => {
     setShowImage(image);
     setShowHideLightbox(true);
   };
+
   return (
     <main>
       <div className="container">
