@@ -1,0 +1,178 @@
+@mixin flex($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin witchingHour {
+  background: #c31432;
+  background: -webkit-linear-gradient(to bottom, #240b36, #c31432);
+  background: linear-gradient(to bottom, #240b36, #c31432);
+}
+
+$white: #fff;
+$black: #000;
+
+h1,
+h2,
+h3,
+h4,
+.btn {
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  @include flex(column, center);
+  @include witchingHour;
+
+  #root {
+    width: 50%;
+    min-width: 400px;
+    height: auto;
+    .container {
+      width: 100%;
+      height: 100%;
+      min-height: 90vh;
+      margin: 0 auto;
+      padding: 20px;
+      background: $white;
+      border-radius: 10px;
+      @include flex(column, space-between);
+      .title {
+        width: 100%;
+        text-align: center;
+
+        .personBadgeFill,
+        h1 {
+          font-size: 2rem;
+          color: #c31432;
+        }
+      }
+
+      section {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+
+        .contact {
+          margin: 1.5rem auto;
+          @include flex(row, space-between);
+
+          h3 {
+            color: rgb(120, 201, 228);
+          }
+
+          h4 {
+            color: rgb(126, 117, 117);
+          }
+
+          .editBtns {
+            .btn {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .btn {
+        padding: 5px 10px;
+        margin: 0 20px;
+        border-radius: 5px;
+        border: none;
+        background: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.7s;
+      }
+
+      .edit {
+        color: blue;
+        &:hover {
+          background: blue;
+          color: $white;
+        }
+      }
+
+      .add {
+        color: green;
+        &:hover {
+          background: green;
+          color: $white;
+        }
+      }
+
+      .remove {
+        color: red;
+        &:hover {
+          background: red;
+          color: $white;
+        }
+      }
+
+      .form {
+        min-width: 340px;
+        height: max-content;
+        position: absolute;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 0.5rem;
+        @include witchingHour;
+
+        .close {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          font-size: 2rem;
+          color: $white;
+          cursor: pointer;
+        }
+
+        .form-control {
+          margin: 20px 0;
+
+          label {
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            color: $white;
+          }
+
+          input {
+            font-size: 1.1rem;
+            width: 100%;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.5rem;
+            border: none;
+          }
+        }
+
+        .btn {
+          padding: 0.2rem 0.9rem;
+          background: $white;
+        }
+
+        .save,
+        .cancel {
+          border: 2px solid #c31432;
+          color: rgba(195, 20, 50, 0.5);
+
+          &:hover {
+            color: rgba(195, 20, 50, 1);
+          }
+        }
+      }
+    }
+  }
+}

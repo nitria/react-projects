@@ -1,0 +1,212 @@
+h1,
+h2,
+h3,
+h4,
+.btn {
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #c31432;
+  background: -webkit-gradient(linear, left top, left bottom, from(#240b36), to(#c31432));
+  background: linear-gradient(to bottom, #240b36, #c31432);
+}
+
+body #root {
+  width: 50%;
+  min-width: 400px;
+  height: auto;
+}
+
+body #root .container {
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #root .container .title {
+  width: 100%;
+  text-align: center;
+}
+
+body #root .container .title .personBadgeFill,
+body #root .container .title h1 {
+  font-size: 2rem;
+  color: #c31432;
+}
+
+body #root .container section {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+body #root .container section .contact {
+  margin: 1.5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #root .container section .contact h3 {
+  color: #78c9e4;
+}
+
+body #root .container section .contact h4 {
+  color: #7e7575;
+}
+
+body #root .container section .contact .editBtns .btn {
+  font-size: 1rem;
+}
+
+body #root .container .btn {
+  padding: 5px 10px;
+  margin: 0 20px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+body #root .container .edit {
+  color: blue;
+}
+
+body #root .container .edit:hover {
+  background: blue;
+  color: #fff;
+}
+
+body #root .container .add {
+  color: green;
+}
+
+body #root .container .add:hover {
+  background: green;
+  color: #fff;
+}
+
+body #root .container .remove {
+  color: red;
+}
+
+body #root .container .remove:hover {
+  background: red;
+  color: #fff;
+}
+
+body #root .container .form {
+  min-width: 340px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  background: #c31432;
+  background: -webkit-gradient(linear, left top, left bottom, from(#240b36), to(#c31432));
+  background: linear-gradient(to bottom, #240b36, #c31432);
+}
+
+body #root .container .form .close {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+body #root .container .form .form-control {
+  margin: 20px 0;
+}
+
+body #root .container .form .form-control label {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+body #root .container .form .form-control input {
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+body #root .container .form .btn {
+  padding: 0.2rem 0.9rem;
+  background: #fff;
+}
+
+body #root .container .form .save,
+body #root .container .form .cancel {
+  border: 2px solid #c31432;
+  color: rgba(195, 20, 50, 0.5);
+}
+
+body #root .container .form .save:hover,
+body #root .container .form .cancel:hover {
+  color: #c31432;
+}
+/*# sourceMappingURL=style.css.map */
