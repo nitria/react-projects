@@ -12,6 +12,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 h2,
@@ -46,8 +47,14 @@ p {
   position: relative;
 }
 
+.loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loading-title {
-  top: 130px;
   position: relative;
   z-index: 1;
 }
@@ -97,6 +104,72 @@ p {
   max-width: 800px;
   width: 100%;
   height: auto;
+}
+
+.thumbnails {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.thumbnails img {
+  width: 190px;
+  height: 150px;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.imgContainer {
+  width: 80%;
+  max-width: 1000px;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.close svg {
+  font-size: 2.5rem;
+  color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+.close svg:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 760px) {
