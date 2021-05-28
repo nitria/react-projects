@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GalleryContext } from "../context";
 
-const MenuBtns = ({ menuBtns, filterBtns }) => {
+const MenuBtns = () => {
+  const contextValues = useContext(GalleryContext);
   return (
     <div className="menuBtns">
-      {menuBtns.map((menuBtn, id) => {
+      {contextValues.menuBtns.map((menuBtn, id) => {
         return (
-          <button className="btn" onClick={() => filterBtns(menuBtn)} key={id}>
+          <button
+            className="btn"
+            onClick={() => contextValues.filterBtns(menuBtn)}
+            key={id}
+          >
             {menuBtn}
           </button>
         );

@@ -1,9 +1,13 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useContext } from "react";
 import { cars } from "../data";
 import { X, ChevronLeft, ChevronRight } from "react-bootstrap-icons";
+import { GalleryContext } from "../context";
 
-const Lightbox = ({ closeLightbox, showImage }) => {
-  var currentImage = cars.findIndex((car) => car.mainImg === showImage);
+const Lightbox = () => {
+  const contextValues = useContext(GalleryContext);
+  var currentImage = cars.findIndex(
+    (car) => car.mainImg === contextValues.showImage
+  );
   const [currentIndex, setCurrentIndex] = useState(currentImage);
   const { title, id } = cars[currentIndex];
 
@@ -16,6 +20,7 @@ const Lightbox = ({ closeLightbox, showImage }) => {
     }
     return number;
   };
+
   const prev = useCallback(() => {
     setCurrentIndex(checkNumber(currentIndex - 1));
   }, [currentIndex]);
@@ -34,7 +39,7 @@ const Lightbox = ({ closeLightbox, showImage }) => {
   return (
     <div className="lightbox">
       <div className="close">
-        <X className="closeBtn" onClick={closeLightbox} />
+        <X className="closeBtn" onClick={contextValues.closeLightbox} />
       </div>
       <div className="mainImgContainer">
         {cars.map((car, num) => {

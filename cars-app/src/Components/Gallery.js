@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GalleryContext } from "../context";
 
-const Gallery = ({ cars, showimage }) => {
+const Gallery = () => {
+  const contextValues = useContext(GalleryContext);
   return (
     <div className="gallery">
-      {cars.map((car) => {
+      {contextValues.gallery.map((car) => {
         const { img, category, id, mainImg } = car;
         return (
           <div className="image-box" key={id}>
@@ -11,7 +13,7 @@ const Gallery = ({ cars, showimage }) => {
               src={img}
               alt={category}
               className="img"
-              onClick={() => showimage(mainImg)}
+              onClick={() => contextValues.showimage(mainImg)}
             />
           </div>
         );
