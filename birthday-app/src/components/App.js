@@ -5,11 +5,7 @@ import data from "../data";
 const App = () => {
   const [people, setPeople] = useState(data);
   const birthdaysNumber = people.length;
-  const scrolled = () => {
-    console.log(window.scrollY);
-  };
 
-  window.addEventListener("scroll", scrolled);
   if (birthdaysNumber === 0) {
     return (
       <main className="container">
