@@ -4,7 +4,7 @@ import { PlusCircle, DashCircle } from "react-bootstrap-icons";
 const Questions = ({ title, answer }) => {
   const [showHide, setShowHide] = useState(false);
   return (
-    <section className="questionComponent">
+    <section className="questionSection">
       <div className="question">
         <h3>{title}</h3>
         <button className="btn" onClick={() => setShowHide(!showHide)}>
