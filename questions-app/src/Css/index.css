@@ -2,18 +2,35 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  --white: #fff;
+  --cornflowerblue: cornflowerblue;
+  --lightBlack: rgb(44, 44, 44);
+  --lightWhite: rgb(236, 236, 236);
+  --lightGray: rgb(68, 66, 66);
 }
-h2 {
+
+h1 {
   font-size: 1.3rem;
 }
 
-h3 {
+h2 {
   font-size: 1.1rem;
-  color: rgb(44, 44, 44);
+  color: var(--cornflowerblue);
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--lightBlack);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--lightGray);
+  line-height: 1.5rem;
 }
 
 body {
-  background: cornflowerblue;
+  background: var(--cornflowerblue);
   font-family: sans-serif;
 }
 
@@ -27,7 +44,7 @@ main {
 .container {
   width: 50vw;
   padding: 20px;
-  background: rgb(236, 236, 236);
+  background: var(--lightWhite);
   border-radius: 5px;
 }
 
@@ -40,7 +57,7 @@ main {
   padding: 20px;
   margin: 20px auto;
   border-radius: 5px;
-  background: #fff;
+  background: var(--white);
   width: 90%;
 }
 
@@ -50,15 +67,9 @@ main {
   padding-bottom: 20px;
 }
 
-p {
-  font-size: 1rem;
-  color: rgb(87, 81, 81);
-  line-height: 1.5rem;
-}
-
 .btn {
   background: transparent;
-  color: cornflowerblue;
+  color: var(--cornflowerblue);
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
@@ -70,10 +81,10 @@ p {
     width: 80vw;
   }
 
-  h2 {
+  h1 {
     font-size: 1rem;
   }
-  h3 {
+  h2 {
     font-size: 0.9rem;
   }
 }
